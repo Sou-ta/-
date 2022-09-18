@@ -2,8 +2,8 @@ Portfolio制作 課題
 
 https://docs.google.com/spreadsheets/d/13RXtP15pRYqYJKGcn1rFiyeGeriNtPwlGh5vACuJelM/edit?usp=sharing
 
-#概要
-##1 制作課題、製作理由について
+# 概要
+## 1 制作課題、製作理由について
 * 私が現在勤めている会社では休日出勤の日に急に休んでしまう人が多く、
 一度に10人以上休みが重なってしまうという事態が発生しました。
 これは有給申請や出勤日が直接口頭で伝える以外の手段が無く、
@@ -11,7 +11,7 @@ https://docs.google.com/spreadsheets/d/13RXtP15pRYqYJKGcn1rFiyeGeriNtPwlGh5vACuJ
 社員の有給の申請や、出勤日が確認できるようなアプリケーションを作成することにしました。
 
 
-##2 実装機能について
+## 2 実装機能について
 
 ### 会員機能
 * 投稿がどの会員によるものか明らかにするため
