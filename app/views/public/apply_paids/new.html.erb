@@ -1,0 +1,24 @@
+<div class="container px-4 px-sm-0 ">
+  <div class="row">
+    <div class="col-3 mx-3 mt-3">
+      <h2>有給申請</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-10 text-center mt-4">
+      <%= form_with(model: [:public, @apply_paid], local: true) do |form| %>
+        <div>
+          <%= form.label :"申請日" %>
+          <%= form.date_select :start_time %>
+        </div>
+        <div>
+          <%= form.label :"申請理由" %>
+          <%= form.select :reason, ApplyPaid.reasons.map{|k, v| [k, k]}, selected: ApplyPaid.reasons[@apply_paid.reason] %>
+        </div>
+        <div>
+          <%= form.submit "保存する", class:"btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

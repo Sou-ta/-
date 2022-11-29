@@ -1,0 +1,11 @@
+ja:
+  enums:
+    apply_paid: # モデル名
+      apply_status: # カラム名
+        waiting: '対応待ち' # enumの値
+        permited: '許可済み' # enumの値
+        denied: '申請拒否' # enumの値
+    customer: # モデル名
+      privacy: # カラム名
+        published: 公開 # enumの値
+        closed: 非公開 # enumの値

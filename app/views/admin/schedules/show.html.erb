@@ -1,0 +1,29 @@
+<div class="container px-4 px-sm-0 ">
+  <div class="row">
+    <div class="col-3 mx-3 mt-3">
+      <h2>予定詳細</h2>
+    </div>
+    </div>
+    <div class="row">
+      <div class="my-3 mx-auto p-5 col-4">
+       <table class="table table-borderless">
+       <tr>
+       <th>予定名</th>
+       <td><%= @schedule.event_name %></td>
+       </tr>
+       <tr>
+       <th>状況</th>
+       <td><%= @schedule.event_status %></td>
+       </tr>
+       <tr>
+       </tr>
+     </table>
+     </div>
+   </div>
+   <div class="row">
+   <div class="col text-center">
+     <%= link_to "編集する", edit_admin_schedule_path(@schedule), class: 'btn btn-success px-3 mx-auto' %>
+     <%= link_to "削除する", admin_schedule_path(@schedule), method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger px-3 mx-5' %>
+   </div>
+   </div>
+</div>

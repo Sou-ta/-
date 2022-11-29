@@ -1,0 +1,35 @@
+<div class="container px-4 px-sm-0 ">
+  <div class="row">
+    <div class="col-3 mx-3 mt-3">
+      <h2>有給詳細</h2>
+    </div>
+    </div>
+    <div class="row">
+      <div class="my-3 mx-auto p-5 col-4">
+       <table class="table table-borderless">
+       <tr>
+       <th>申請者</th>
+       <td><%= @apply_paid.user.name %></td>
+       </tr>
+    　 <tr>
+       <th>申請理由</th>
+       <td><%= @apply_paid.reason %></td>
+       </tr>
+       <tr>
+       <th>状況</th>
+       <td><%= @apply_paid.apply_status_i18n %></td>
+       </tr>
+       <tr>
+         <th>申請状況</th>
+         <td>
+          <%= form_with model: [:admin, @apply_paid], method: :patch, local: true do |f| %>
+          <%#= f.select :apply_status,ApplyPaid.apply_statuses, selected: ApplyPaid.apply_statuses[@apply_paid.apply_status] %>
+              <%= f.select :apply_status, ApplyPaid.apply_statuses.keys.map {|k| [I18n.t("enums.apply_paid.apply_status.#{k}"), k]} %>
+          <%= f.submit "更新", class: "btn btn-success" %>
+          <% end %>
+         </td>
+       </tr>
+     </table>
+     </div>
+   </div>
+</div>

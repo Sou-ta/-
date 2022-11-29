@@ -1,0 +1,37 @@
+<div class="container px-4 px-sm-0">
+    <div class="row">
+    <div class="col-3 mx-3 mt-3">
+      <h2>予定登録</h2>
+    </div>
+    </div>
+  <div class="row">
+    <div class="col-10 text-center mt-4">
+      <table class="table table-borderless">
+       <%= form_with(model: [:admin, @schedule], local: true) do |form| %>
+       <tr>
+       <th><%= form.label :予定名 %></th>
+       <td><%= form.text_field :event_name %></td>
+       </tr>
+       <tr>
+       <th><%= form.label :"開始日" %></th>
+       <td><%= form.date_select :start_time %></td>
+       </tr>
+       <tr>
+       <th><%= form.label :"終了日" %></th>
+       <td><%= form.date_select :end_time %></td>
+       </tr>
+       <tr>
+         <th><%= form.label :"オプション" %></th>
+         <td><%= form.select :event_status,Schedule.event_statuses.map{|k, v| [k, k]}, selected: Schedule.event_statuses[@schedule.event_status] %></td>
+       </tr>
+       <tr>
+         <th></th>
+         <td>
+         <%= form.submit "保存する", class:"btn btn-primary" %>
+         </td>
+       </tr>
+       <% end %>
+      </table>
+    </div>
+  </div>
+</div>
