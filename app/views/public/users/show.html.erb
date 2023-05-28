@@ -1,17 +1,17 @@
 <div class="container px-5 px-sm-0 ">
  <div class="row">
-   <div class="col-3 mx-3 mt-3">
+   <div class="col-5 mx-3 mt-3">
     <h3>マイページ</h3>
    </div>
  </div>
 <div class="row">
   <div class="col-9">
-    <div class="font-weight-bold lead col-6 my-3">
-    登録情報 <%= link_to "編集する", edit_public_user_path(current_user), class: "btn btn-success px-3 mx-4" %>
+    <div class="font-weight-bold lead col-10 col-sm-8 my-3">
+    登録情報 <%= link_to "編集する", edit_public_user_path(current_user), class: "btn btn-md btn-success px-3 mx-4" %>
     </div>
     <table class="table table-bordered" >
         <tr>
-          <th class="table-active border-dark col-4">氏名</th>
+          <th class="table-active border-dark col-5 col-sm-6">氏名</th>
           <td class="border-dark"><%= current_user.name %></td>
         </tr>
         <tr>
@@ -19,7 +19,7 @@
           <td class="border-dark"><%= current_user.email %></td>
         </tr>
     </table>
-    <div class="font-weight-bold lead col-6 mt-4 mb-3">
+    <div class="font-weight-bold lead col-10 col-sm-8 mt-4 mb-3">
       <table>
         <tr>
          <td>有給取得日数</td>

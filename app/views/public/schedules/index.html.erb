@@ -5,12 +5,12 @@
   </div>
  </div>
   <div class="row">
-     <div class="col-10 mt-2 text-right">
+     <div class="col-10  mt-2 text-right">
      <%= link_to "有給申請", new_public_apply_paid_path, class: "btn shadow-sm btn-outline-secondary" %>
      </div>
   </div>
   <div class="row">
-    <div class="col-10 mt-4">
+    <div class="col-sm-10 mt-4">
     <%= month_calendar events: @schedules do |date, schedules| %>
     <div style="background-color: <%= schedules.first&.get_color %>">
             <%= date.day %>
@@ -26,18 +26,27 @@
     </div>
  </div>
  <div class="row">
-     <div class="col-10 mt-3 text-dark">
-        <table hspace="1000" class="mx-3">
+     <div class="col-10 col-sm-12 mt-3 text-dark">
+        <table border="1" bordercolor="#ffffff" class="mx-3">
             <tr>
-             <th bgcolor="#f0fff0" >出勤日（申請可）</th>
-             <td></td>
-             <th bgcolor="#ffff00">出勤日（申請困難）</th>
-             <td></td>
-             <th bgcolor="800000">出勤日（申請不可）</th>
-             <td></td>
-             <th bgcolor="#adff2">休日</th>
-             <td></td>
-             <th bgcolor="#00ffff">有給推奨日</th>
+             <th bgcolor="#f0fff0" style="width:30% " ></th>
+             <td>・・出勤日（申請可）</td>
+            </tr>
+            <tr>
+             <th bgcolor="#ffff00"></th>
+             <td>・・出勤日（申請困難）</td>
+            </tr>
+            <tr>
+             <th bgcolor="800000"></th>
+             <td>・・出勤日（申請不可）</td>
+            </tr>
+            <tr>
+             <th bgcolor="#adff2"></th>
+             <td>・・休日</td>
+            </tr>
+            <tr>
+             <th bgcolor="#00ffff"></th>
+             <td>・・有給推奨日</td>
             </tr>
         </table>
      </div>
